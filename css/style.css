@@ -84,6 +84,7 @@ header{
   color:yellowgreen;
   *font-weight: bold;
   font-size: 1.5em;
+  font-family: Dosis,sans-serif;
 }
 .menu_list{
   width: 80%;
@@ -141,7 +142,9 @@ header{
 
 .header_content h1{
   margin-bottom: 50px;
+  margin-left: 10px;
   letter-spacing: 0.3em;
+  font-size: 35px;
 }
 
 .header_content button{
