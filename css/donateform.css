@@ -1,29 +1,42 @@
 
-.formbackground{
-  width: 100%;
-  height: 210vh; /*VH is vertical height*/
+html, body {
+  height: 100%;
+}
+
+body {
   background-image: url(../img/homeless_with_blanket.jpg);
   *background:grey;
-  background-size:cover;
+  background-size: cover;
   *background-repeat: no-repeat;
-  background-position: 50% center;
+  background-position: center -200px;
+  background-attachment: fixed;
   font-family: 'Dosis', sans-serif;
-  margin-top: -80px;
+
+}
+
+.header_menu {
+  background: none;
+  background-color: rgba(0,0,0,.3);
+}
+
+h1{
+  text-align: center;
 }
 
 .form-donate {
   *text-transform: uppercase;
-  position:absolute;
+  /* position:absolute;
   top: 110%;
-  left:50%;
- 
+  left:50%; */
+  padding: 1em 2%;
   border-radius: 5px;
   color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  position: center;
-  width: auto;
+  /* transform: translate(-50%, -50%); */
+  /* text-align: center; */
+  width: 100%;
+  max-width: 500px;
+  margin: 100px auto 3em;
   background: rgba(52, 27, 43, 0.5);
   *filter: blur(0.5px);
  }
@@ -39,21 +52,51 @@
    font-size: 35px;
  }
 
- .firstnamedonateInput ,.lastnamedonateInput , .datedonateInput , .companydonateInput , .addressdonateInput , .countrydonateInput , .phonenumberdonateInput , .emaildonateInput , .amountdonateInput{
-   width:90%;
+
+
+
+.form-donate ul li {
+  margin-bottom: 1em;
+}
+
+
+.form-donate input:not([type=checkbox]):not([type=radio]):not([type=submit]),
+.form-donate select,
+.form-donate textarea {
+   width:100%;
    
    *background-color: transparent;
-   text-align: center;
+   /* text-align: center; */
    border-radius: 5px;
+   border: none;
+   padding: .3em 1em;
    font-size: 20px;
    *text-transform: none;
  }
 
+ .form-donate .small-inputs {
+  display: flex;
+  justify-content: space-between;
+ }
+ .form-donate .small-inputs div {
+  width: 48%;
+ }
+ .form-donate .small-inputs label {
+   display: block;
+ }
+  
+
+
+
  .radiodonateInputEnglish{
    text-align: left;
-   width: 40%;
+   width: 45%;
    margin: 0 auto;
  }
+
+.radiodonate input {
+  margin-right: .5em;
+}
 
  .radiodonateInputFrench{
   text-align: left;
@@ -63,16 +106,14 @@
  
 
  .textareadonateInput{
-   *font-size: 20px;
    height: auto;
    padding: 10px 38px;
-   *background-color: transparent;
-   *font-size: 12px;
-   margin: 40px 20px;
+   /* background-color: transparent; */
+   /* margin: 40px 20px; */
    border-radius: 5px;
 
    text-decoration: none;
-   text-transform: uppercase;
+   text-transform: none;
    letter-spacing: 1px;
    font-weight: bold;
  }
@@ -98,3 +139,7 @@
    background-color:ORANGE;
    border: 1px solid white;
  }
+
+ 
+
+

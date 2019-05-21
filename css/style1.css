@@ -95,7 +95,7 @@ header{
 #logo_text {
   position: absolute;
   top: 25px;
-  left: 130px;
+  left: 165px;
   text-decoration: none;
   color:yellowgreen;
   *font-weight: bold;
@@ -103,13 +103,17 @@ header{
   font-family: Dosis,sans-serif;
 }
 .menu_list{
-  width: 80%;
+  width: 65%;
   text-align: right;
-  padding-right: 50px;
-  
+  margin-left: auto;  
 }
+
+.menu_list ul {
+  display: flex;
+  justify-content: space-around;
+}
+
 .menu_list li {
-  display: inline-block;
   text-transform: uppercase;
   list-style: none;
   letter-spacing: 2px;
@@ -212,49 +216,87 @@ header{
   
 }
 
-/*
-MEDIA STYLES AND RESPONSIVE
-*/
-@media (min-width: 800px){
-  .df{
-    display: none;
-  }
+
+.menu_list {
+  overflow: hidden;
 }
 
-@media (max-width: 800px){
-
-  nav{
-    margin-right: 50px;
-  }
-
-  #logo_text{
-    display: none;
-  }
-
-  /* .langue{
-   margin-left: 15px;
-   top:10px;
-  } */
+.menu_list a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-@media (max-width: 700px){
-  nav{
-    margin-right: 100px;
-  }
+.menu_list a:hover {
+  background-color: red;
+  color: blue;
+}
 
+.menu_list .icon {
+  display: none;
 }
 
 
- @media (max-width: 800px) {
 
-  nav{
-    display: none;
-  }
-  .langue{
-    display: none;
+
+
+@media screen and (max-width: 600px) {
+  .menu_list li:not(last-child) {display: none;}
+  .menu_list .icon {
+    color: #fff;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
-  #logo_text{
+  .menu_list.responsive  ul {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0,0, .3);
+    height: 100vh;
+
+  }
+
+  .menu_list.responsive li {    
+    display: block;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .menu_list.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+  }
+
+  .menu_list li a {
+    font-size: 3em;
+
+  }
+}
+
+@media (max-width: 800px) {
+
+  .header_content {
+    width: 80%;
+  }
+
+}
+
+
+
+
+
+/* @media (max-width: 800px) {
+
+  nav {
     display: none;
   }
 
@@ -262,29 +304,54 @@ MEDIA STYLES AND RESPONSIVE
     width: 80%;
   }
 
-  /* .langue{
-    position: absolute;
-    top:30px;
-    right:10px;
-
-} */
-
- }
+}
 
 
 @media (max-width: 480px) {
-  
+  nav {
+    display: flex;
+  } 
   .header_content {
     width: 100%;
   }
-  .langue{
-    position: absolute;
-    top:30px;
-    right:10px;
-  }
 
-
-}
+} */
  
 
+
+
+
+
+/*
+Menu list and myTopNav Styles
+*/
+
+
+
+/*
+Media Screen
+*/
+
+
+/* @media screen and (max-width: 600px) {
+  .menu_list a:not(:first-child) {display: none;}
+  .menu_list a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu_list.responsive {position: relative;}
+  .menu_list.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .menu_list.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+} */
 
